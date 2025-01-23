@@ -1,7 +1,7 @@
 // Name: Maxwell Brohm
 // Program Name: Array Project
 // Date: 1/21/25
-// Extra: All Tasks are in their own function in order to make code more organized and easier to read through
+// Extra: Uses a vector instead of an Array
 
 #include <iostream>
 #include <vector>
