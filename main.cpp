@@ -1,20 +1,18 @@
 // Name: Maxwell Brohm
 // Program Name: Array Project
 // Date: 1/21/25
-// Extra: Uses a vector instead of an Array
 
 #include <iostream>
-#include <vector>
 #include <cstdlib>
 #include <ctime>
-#include <cmath>  // For rounding functionality
+#include <cmath> 
 
 using namespace std;
 
 // Task 1: Array of 10 Random Integers
 void task1() {
     cout << "Task 1: Array of 10 Random Integers" << endl;
-    vector<int> array(10);
+    int array[10];
 
     // Seed the random number generator
     srand(time(0));
@@ -26,8 +24,8 @@ void task1() {
 
     // Print the array
     cout << "Array: ";
-    for (int num : array) {
-        cout << num << " ";
+    for (int i = 0; i < 10; ++i) {
+        cout << array[i] << " ";
     }
     cout << endl;
 
@@ -40,8 +38,8 @@ void task1() {
 
     // Count and print the number of even numbers in the array
     int even_count = 0;
-    for (int num : array) {
-        if (num % 2 == 0) {
+    for (int i = 0; i < 10; ++i) {
+        if (array[i] % 2 == 0) {
             even_count++;
         }
     }
@@ -52,7 +50,7 @@ void task1() {
 // Task 2: Ice Cream Store Sales
 void task2() {
     cout << "Task 2: Ice Cream Store Sales" << endl;
-    vector<float> sales(5);
+    float sales[5];
 
     // Get sales for Monday to Friday
     for (int i = 0; i < 5; ++i) {
@@ -86,7 +84,7 @@ void task2() {
 // Task 3: Array of Ages
 void task3() {
     cout << "Task 3: Array of Ages" << endl;
-    vector<int> ages(20);
+    int ages[20];
 
     // Get ages of 20 people
     for (int i = 0; i < 20; ++i) {
@@ -100,8 +98,8 @@ void task3() {
 
     // Count and print the number of ages greater than 15
     int age_count = 0;
-    for (int age : ages) {
-        if (age > 15) {
+    for (int i = 0; i < 20; ++i) {
+        if (ages[i] > 15) {
             age_count++;
         }
     }
@@ -112,14 +110,14 @@ void task3() {
 // Task 4: Calculate Average Grade
 void task4() {
     cout << "Task 4: Calculate Average Grade" << endl;
-    vector<float> finalGrade = {85.8, 93.7, 76, 88.5, 100, 91.3};
+    float finalGrade[6] = {85.8, 93.7, 76, 88.5, 100, 91.3};
 
     // Calculate the average of the grades
     float sum = 0;
-    for (float grade : finalGrade) {
-        sum += grade;
+    for (int i = 0; i < 6; ++i) {
+        sum += finalGrade[i];
     }
-    float average = sum / finalGrade.size();
+    float average = sum / 6;
 
     // Round to the nearest tenth
     average = round(average * 10) / 10;
